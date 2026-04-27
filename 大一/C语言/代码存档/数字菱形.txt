@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+	char a;
+	int b,i,j,k,p,m,n;
+	scanf("%c %d",&a,&b);
+	for (i=0;i<b;i++)
+	{
+		for(j=b-i;j>1;j--)
+		{
+			printf(" ");
+		}
+		printf("%c",a+i);
+        if(i>0)
+        {
+        	for(k=2*i-1;k>0;k--)
+        	{
+			    printf(" ");
+		    }
+		    printf("%c",a+i);
+		}
+		printf("\n");
+	}
+	for(p=b-2;p>=0;p--)
+	{
+		for(m=b-p;m>1;m--)
+		{
+			printf(" ");
+		}
+		printf("%c",a+p);
+		if(p>0)
+		{
+			for(n=2*p-1;n>0;n--)
+			{
+				printf(" ");
+			}
+			printf("%c",a+p);
+			printf("\n");
+		}
+		
+	}
+
+}

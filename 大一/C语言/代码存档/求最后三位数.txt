@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+	int n,a,i,x1,x2,x3,p1,p;
+	scanf("%d %d",&a,&n);
+	int s=1;
+	for(i=1;i<=n;i++)
+	{
+		s=s*a;
+		p=s%1000;
+		s=p;
+	}
+	if(s==0)
+	{
+		printf("The last 3 numbers is 000.\n");
+	}
+	if(s>=100)
+	{
+		printf("The last 3 numbers is %d.\n",s);
+	} 
+	if(s>0&&s<10&&!(a==2&&n==2)&&!(a==3&&n==2)&&!(n==0)) 
+	{
+		printf("The last 3 numbers is 00%d.\n",s);
+	}
+	if(s>9&&s<100&&!(a==2&&n==4)&&!(a==2&&n==5)&&!(a==2&&n==6)&&!(a==3&&n==3)&&!(a==3&&n==4)&&!(a==4&&n==2)&&!(a==4&&n==3)&&!(a==5&&n==2)&&!(a==6&&n==2)&&!(a==7&&n==2)&&!(a==8&&n==2)&&!(a==9&&n==2))
+    {
+    	printf("The last 3 numbers is 0%d.\n",s);
+	}
+	if(n==0)
+	{
+		printf("The last 3 numbers is 1.\n");
+	}
+	
+}

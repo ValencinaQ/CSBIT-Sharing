@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+	int n,i,s[100000],k=0,t[100000],m,p,q,d,o,e;
+	scanf("%d",&n);
+	for(i=1;i<=2*n;i++)
+	{
+		s[i]=i;
+		t[i]=i;
+	}
+	A:k++;
+	for(m=1;m<=n;m++)
+	{
+		t[2*m]=s[m];
+	}
+ 	for(p=n+1;p>n&&p<=2*n;p++)
+	{
+		t[2*p-1-2*n]=s[p];
+	}
+	for(q=1;q<=2*n;q++)
+	s[q]=t[q];
+	for(o=1;o<=2*n;o++)
+	{
+		if(s[o]-o!=0)
+		{
+			goto A;
+		}
+	}
+	printf("%d\n",k);
+}
+   
